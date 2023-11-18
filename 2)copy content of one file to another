@@ -1,0 +1,28 @@
+#include<stdio.h>
+struct priority_scheduling {
+  char process_name;
+  int burst_time;
+  int waiting_time;
+  int turn_around_time;
+  int priority;
+};
+int main() {
+  int number_of_process;
+  int total = 0;
+  struct priority_scheduling temp_process;
+  int ASCII_number = 65;
+  int position;
+  float average_waiting_time;
+  float average_turnaround_time;
+  printf("Enter the total number of Processes: ");
+  scanf("%d", & number_of_process);
+  struct priority_scheduling process[number_of_process];
+  printf("\nPlease Enter the  Burst Time and Priority of each process:\n");
+  for (int i = 0; i < number_of_process; i++) {
+    process[i].process_name = (char) ASCII_number;
+    printf("\nEnter the details of the process %c \n", process[i].process_name);
+    printf("Enter the burst time: ");
+    scanf("%d", & process[i].burst_time);
+    printf("Enter the priority: ");
+    scanf("%d", & process[i].priority);
+    AS
